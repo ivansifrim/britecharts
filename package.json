@@ -1,0 +1,9 @@
+{
+  "name": "britecharts_demo",
+  "version": "1.0.0",
+  "dependencies": {
+    "britecharts": "^2.0.0",
+    "d3-selection": "^1.1.0"
+  },
+  "private": true
+}

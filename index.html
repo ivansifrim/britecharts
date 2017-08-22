@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="node_modules/britecharts/dist/css/britecharts.min.css" type="text/css" />
+		<script type="text/javascript" src="node_modules/britecharts/dist/bundled/britecharts.min.js"></script>
+		<script type="text/javascript" src="node_modules/d3/build/d3.min.js"></script>
+	</head>
+	<body>
+
+		<h1>Britecharts demo</h1>
+		<div id="barContainer"></div>
+		<script>
+			
+			const DATA = [
+				{name: 'Rabbit', value: 5},
+				{name: 'Bird', value: 4}, 
+				{name: 'Cat', value: 3},
+				{name: 'Fish', value: 4},
+				{name: 'Horse', value: 5}, 
+				{name: 'Dog', value: 6}
+			]
+
+			const barChart = new britecharts.bar();
+			const { colorSchemas } = britecharts.colors;
+			const barContainer = d3.select('#barContainer');
+
+			draw();
+
+			function draw() {
+		    barChart
+	        .width(600)
+	        .height(300)
+	        .isAnimated(true)
+	        .colorSchema(colorSchemas.britecharts)
+		    
+		    barContainer.datum(DATA).call(barChart); 
+			}
+
+		</script>
+	</body>
+</html>
